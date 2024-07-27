@@ -1,5 +1,5 @@
  
-import CreateProductUserCase from "./create.product.usercase";
+import CreateProductUseCase from "./create.product.usecase";
  
 const input = {
   name: "Produto 1",
@@ -20,7 +20,7 @@ describe("Unit test case for user case product", () => {
      
     it("should create a product", async()=>  {
       const productRepository =  ProductMockRepository();
-      const productCreateUserCase = new CreateProductUserCase(productRepository);
+      const productCreateUserCase = new CreateProductUseCase(productRepository);
 
       const output = await productCreateUserCase.execute(input);
                 
@@ -33,7 +33,7 @@ describe("Unit test case for user case product", () => {
 
     it("should thrown an error when name is missing", async () => { 
       const productRepository =  ProductMockRepository();
-      const productCreateUserCase = new CreateProductUserCase(productRepository);
+      const productCreateUserCase = new CreateProductUseCase(productRepository);
 
       input.name = "";
 
@@ -44,7 +44,7 @@ describe("Unit test case for user case product", () => {
 
     it("", async () => { 
       const productRepository =  ProductMockRepository();
-      const productCreateUserCase = new CreateProductUserCase(productRepository);
+      const productCreateUserCase = new CreateProductUseCase(productRepository);
 
       input.price = 0;
 

@@ -24,7 +24,6 @@ describe("Unit test for product update use case", () => {
     const productRepository = ProductMockRepository();
     const productUpdateUseCase = new UpdateProductUseCase(productRepository);
     const output = await productUpdateUseCase.execute(input);
-    console.log(output);
     expect(output).toEqual(input);
   });
 

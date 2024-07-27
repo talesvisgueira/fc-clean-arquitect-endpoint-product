@@ -9,6 +9,7 @@ import {
     tableName: "customers",
     timestamps: false,
   })
+  
   export default class CustomerModel extends Model {
     @PrimaryKey
     @Column

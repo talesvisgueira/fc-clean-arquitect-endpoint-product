@@ -1,4 +1,4 @@
-import ListProductUserCase from "./list.product.usercase";
+import ListProductUserCase from "./list.product.usecase";
 
 
 const product1 = { id: '1', name: 'Product 1', price: 10};
