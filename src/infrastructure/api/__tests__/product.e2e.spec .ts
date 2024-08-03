@@ -55,7 +55,7 @@ describe("E2E test for product", () => {
     const product = listResponse.body.products[0];
     expect(product.name).toBe("Produto 1");
     expect(product.price).toBe(10);
-    
+
     const product2 = listResponse.body.products[1];
     expect(product2.name).toBe("Produto 2");
     expect(product2.price).toBe(20);
@@ -65,8 +65,6 @@ describe("E2E test for product", () => {
     .set("Accept", "application/xml")
     .send();
 
-    // console.log(listResponseXML.text);
-
     expect(listResponseXML.status).toBe(200);
     expect(listResponseXML.text).toContain(`<?xml version="1.0" encoding="UTF-8"?>`);
 
@@ -75,7 +73,6 @@ describe("E2E test for product", () => {
     expect(listResponseXML.text).toContain(`<name>Produto 1</name>`);
     expect(listResponseXML.text).toContain(`<price>10</price>` );
     expect(listResponseXML.text).toContain(`</product>`);
-
     expect(listResponseXML.text).toContain(`<product>`);
     expect(listResponseXML.text).toContain(`<name>Produto 2</name>`);
     expect(listResponseXML.text).toContain(`<price>20</price>` );
